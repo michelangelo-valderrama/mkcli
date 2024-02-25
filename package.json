@@ -1,18 +1,24 @@
 {
   "name": "mkcli",
-  "module": "index.ts",
+  "module": "src/cli.ts",
   "type": "module",
   "scripts": {
-    "dev": "bun run src/app.ts"
+    "start": "bun run src/cli.ts",
+    "dev": "bun --watch run src/cli.ts"
   },
   "devDependencies": {
     "@types/bun": "latest",
-    "@types/inquirer": "^9.0.7"
+    "@types/inquirer": "^9.0.7",
+    "@types/shelljs": "^0.8.15"
   },
   "peerDependencies": {
     "typescript": "^5.0.0"
   },
   "dependencies": {
-    "inquirer": "^9.2.15"
+    "@antfu/ni": "^0.21.12",
+    "chalk": "^5.3.0",
+    "inquirer": "^9.2.15",
+    "nanospinner": "^1.1.0",
+    "shelljs": "^0.8.5"
   }
 }
